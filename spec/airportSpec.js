@@ -14,5 +14,12 @@ describe("Airport", function() {
     gatwick.landPlane(plane)
     expect(gatwick.getRunway()).toEqual([plane])
   })
+
+  it("Can takeoff a plane", function() {
+    gatwick.landPlane(plane)
+    gatwick.takeOff()
+    expect(gatwick.getRunway()).toEqual([])
+  })
+
 });
 

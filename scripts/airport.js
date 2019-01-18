@@ -10,5 +10,9 @@ class Airport {
   landPlane(plane) {
     this.runway.push(plane);
   }
+
+  takeOff() {
+    this.runway.pop();
+  }
   
 }
