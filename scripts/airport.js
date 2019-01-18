@@ -1,8 +1,7 @@
-const capacity = 3
-
 class Airport {
-  constructor(){
-    this.runway = []
+  constructor(capacity = 3){
+    this.runway = [];
+    this.capacity = capacity;
   }
 
   getRunway() {
@@ -10,7 +9,7 @@ class Airport {
   }
 
   landPlane(plane) {
-    if(this.runway.length >= 3) {
+    if(this.runway.length >= this.capacity) {
       return "Airport at capacity" 
     } else {
       this.runway.push(plane)
