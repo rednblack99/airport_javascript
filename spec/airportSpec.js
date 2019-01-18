@@ -21,5 +21,12 @@ describe("Airport", function() {
     expect(gatwick.getRunway()).toEqual([])
   })
 
+  it("Prevents landing when airport is at capacity", function() {
+    gatwick.landPlane(plane)
+    gatwick.landPlane(plane)
+    gatwick.landPlane(plane)
+    expect(gatwick.landPlane(plane)).toEqual("Airport at capacity")
+  })
+
 });
 
